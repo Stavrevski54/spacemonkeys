@@ -1,0 +1,5 @@
+ david,14
+karolina,49
+ david,10
+ david ,35
+ david,4
