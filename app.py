@@ -55,63 +55,6 @@ bulletY = 380
 bulletX_change = 0
 bulletY_change = 10
 bullet_state = "ready"
-import math
-import random
-import pygame
-from pygame import mixer
-import os
-
-# Initialize the pygame
-pygame.init()
-
-# Create the screen
-screen = pygame.display.set_mode((800, 500))
-
-# Background
-background = pygame.image.load('background.png')
-
-# Sound
-mixer.music.load("background.mp3")
-mixer.music.play(-1)
-
-# Caption and Icon
-pygame.display.set_caption("Space Invader")
-icon = pygame.image.load('ufo.png')
-pygame.display.set_icon(icon)
-
-# Player
-playerImg = pygame.image.load('player.png')
-playerX = 370
-playerY = 380
-playerX_change = 0
-
-# Enemy
-enemyImg = []
-enemyX = []
-enemyY = []
-enemyX_change = []
-enemyY_change = []
-num_of_enemies = 6
-
-
-def initialize_enemies():
-    for i in range(num_of_enemies):
-        enemyImg.append(pygame.image.load('enemy.png'))
-        enemyX.append(random.randint(0, 736))
-        enemyY.append(random.randint(50, 150))
-        enemyX_change.append(2)  # Adjusted speed to 2 pixels per frame
-        enemyY_change.append(40)
-
-
-initialize_enemies()
-
-# Bullet
-bulletImg = pygame.image.load('bullet.png')
-bulletX = 0
-bulletY = 380
-bulletX_change = 0
-bulletY_change = 10
-bullet_state = "ready"
 
 # Score
 score_value = 0
